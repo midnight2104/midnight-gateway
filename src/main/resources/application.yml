@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: midnight-gateway
+
+server:
+  port: 8888
+
+midnightregistry:
+  servers: http://localhost:8484
