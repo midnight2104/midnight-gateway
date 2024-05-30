@@ -1,15 +1,15 @@
-package com.midnight.gateway;
+package com.midnight.gateway.flux;
 
+import com.midnight.gateway.flux.GatewayHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.RouterFunction;
 
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
-@Component
+//@Component
 public class GatewayRouter {
 
     @Autowired

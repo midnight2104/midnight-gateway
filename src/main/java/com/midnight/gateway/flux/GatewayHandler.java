@@ -1,4 +1,4 @@
-package com.midnight.gateway;
+package com.midnight.gateway.flux;
 
 import com.midnight.rpc.core.api.LoadBalancer;
 import com.midnight.rpc.core.api.RegistryCenter;
@@ -16,10 +16,10 @@ import reactor.core.publisher.Mono;
 
 import java.util.List;
 
-@Component
+//@Component
 public class GatewayHandler {
 
-    @Autowired
+//    @Autowired
     private RegistryCenter rc;
 
     private LoadBalancer<InstanceMeta> loadBalancer = new RoundRobinLoadBalancer();
