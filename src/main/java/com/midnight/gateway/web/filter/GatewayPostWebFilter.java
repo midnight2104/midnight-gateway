@@ -1,4 +1,4 @@
-package com.midnight.gateway;
+package com.midnight.gateway.web.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
  */
 @Component
 @Slf4j
-public class GatewayPostFilter implements WebFilter {
+public class GatewayPostWebFilter implements WebFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {

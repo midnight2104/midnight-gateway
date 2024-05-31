@@ -6,8 +6,8 @@ GET http://localhost:8888/gw
 
 
 
-### POST user
-POST http://localhost:8888/gw/com.midnight.rpc.demo.api.UserService
+### POST midnight-rpc
+POST http://localhost:8888/gw/midnight-rpc/com.midnight.rpc.demo.api.UserService
 Content-Type: application/json
 
 {
@@ -16,5 +16,25 @@ Content-Type: application/json
   "args":[100]
 }
 
+### POST direct
+POST http://localhost:8888/gw/direct/com.midnight.rpc.demo.api.UserService
+Content-Type: application/json
+
+{
+  "service":"com.midnight.rpc.demo.api.UserService",
+  "methodSign":"findById@1_int",
+  "args":[100]
+}
+
+
+### POST direct backend
+POST http://localhost:8888/gw/direct//com.midnight.rpc.demo.api.UserService?backend=http://localhost:8082/midnight-rpc
+Content-Type: application/json
+
+{
+  "service":"com.midnight.rpc.demo.api.UserService",
+  "methodSign":"findById@1_int",
+  "args":[100]
+}
 
 
